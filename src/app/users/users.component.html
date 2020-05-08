@@ -5,8 +5,8 @@
 
     <div class="products-list">
         <div *ngFor="let user of users$ | async" class="products-list__item">
-            <app-product-card  [user]="user">
-            </app-product-card>
+            <app-user-card  [user]="user">
+            </app-user-card>
         </div>
     </div>
 </app-layout>

@@ -21,7 +21,7 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params
-      .pipe(map(p => p.productId))
+      .pipe(map(p => p.userId))
       .subscribe(id => {
         this.usersService.getUserById(id)
           .subscribe(user => this.user = user);

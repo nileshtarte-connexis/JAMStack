@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { LayoutComponent } from './layout/layout.component';
-import { ProductCardComponent } from './product-card/product-card.component';
+import { UserCardComponent } from './user-card/user-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
@@ -15,7 +15,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     AppComponent,
     UsersComponent,
     LayoutComponent,
-    ProductCardComponent,
+    UserCardComponent,
     UserDetailsComponent
   ],
   imports: [
