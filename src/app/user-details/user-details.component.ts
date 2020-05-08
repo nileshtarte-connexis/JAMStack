@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
-import { User, UsersService } from '../products.service';
+import { User, UsersService } from '../users.service';
 
 @Component({
-  selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss']
+  selector: 'app-user-details',
+  templateUrl: './user-details.component.html',
+  styleUrls: ['./user-details.component.scss']
 })
-export class ProductDetailsComponent implements OnInit {
+export class UserDetailsComponent implements OnInit {
   id: string;
   user: User;
 
