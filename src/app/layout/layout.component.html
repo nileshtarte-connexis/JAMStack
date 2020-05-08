@@ -1,0 +1,21 @@
+<div class="layout">
+    <nav>
+        <div class="nav-wrapper container">
+            <a [routerLink]="['/']" class="brand-logo">
+                JAMStack
+            </a>
+        </div>
+    </nav>
+    
+    <div class="container layout__content">
+        <header>
+            <h3>
+                {{ title }}
+            </h3>
+        </header>
+
+        <main class="layout__content">
+            <ng-content></ng-content>
+        </main>
+    </div>
+</div>

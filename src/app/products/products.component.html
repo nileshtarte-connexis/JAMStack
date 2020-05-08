@@ -1,0 +1,12 @@
+<app-layout title="All Users">
+    <h4>
+        Users
+    </h4>
+
+    <div class="products-list">
+        <div *ngFor="let user of users$ | async" class="products-list__item">
+            <app-product-card  [user]="user">
+            </app-product-card>
+        </div>
+    </div>
+</app-layout>

@@ -1,0 +1,25 @@
+<app-layout [title]="user.name" *ngIf="user">
+    <div class="card" [ngClass]="{'vertical': type === 'vertical'}">
+        <div class="card-image">
+            <img [src]="user.image" />
+        </div>
+        <div >
+            <div class="card-content">
+                <p class="product-card__description">
+                    {{ user.description }}
+                </p>
+                <p>
+                   <span> Email : {{ user.email }} </span>
+                </p>
+                <p>
+                    <span> Phone Number : {{ user.phoneNumber }} </span>
+                 </p>
+            </div>
+            <div class="card-action">
+                <a [routerLink]="['/']">
+                    View All User
+                </a>
+            </div>
+        </div>
+    </div>
+</app-layout>

@@ -1,0 +1,21 @@
+<div class="card" [ngClass]="{'horizontal': type === 'horizontal'}">
+    <div class="card-image">
+        <img [src]="user.image" />
+        <span class="card-title" *ngIf="type !== 'horizontal'">{{ user.name }}</span>
+    </div>
+    <div [ngClass]="{'card-stacked': type === 'horizontal'}">
+        <div class="card-content">
+            <p>
+                {{ user.phoneNumber }}
+            </p>
+            <p>
+                {{ user.email }}
+            </p>
+        </div>
+        <div class="card-action">
+            <a [routerLink]="['/users/' + user.id]" *ngIf="!showBuyButton">
+                View Details
+            </a>
+        </div>
+    </div>
+</div>
