@@ -21,7 +21,7 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get<User[]>('http://www.mocky.io/v2/5eb3fe2a0e00006700081816');
+    return this.http.get<User[]>('http://www.mocky.io/v2/5eb5458e3100005e0069944c');
   }
 
   getUserById(id: string): Observable<User | null> {
