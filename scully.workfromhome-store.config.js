@@ -6,7 +6,7 @@ exports.config = {
     '/users/:userId': {
         type: 'json',
         userId: {
-            url: 'http://www.mocky.io/v2/5eb5458e3100005e0069944c',
+            url: 'http://localhost:1337/user-details',
             property: 'id'
         }
     }

@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 export interface User {
   name: string;
-  id: string;
+  id: number;
   url: string;
   phoneNumber: number;
   image: string;
@@ -21,19 +21,23 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get<User[]>('http://www.mocky.io/v2/5eb5458e3100005e0069944c');
+    // http://www.mocky.io/v2/5eb5458e3100005e0069944c
+    return this.http.get<User[]>('http://localhost:1337/user-details');
   }
 
-  getUserById(id: string): Observable<User | null> {
-    return this.getUsers()
-      .pipe(map(products => {
-        const filtered = products.filter(x => x.id === id);
+  getUserById(id: number) {
+    // return this.getUsers()
+    //   .pipe(map(products => {
+    //     const filtered = products.filter(x => x.id === id);
 
-        if (filtered.length > 0) {
-          return filtered[0];
-        }
+    //     if (filtered.length > 0) {
+    //       return filtered[0];
+    //     }
 
-        return null;
-      }));
+    //     return null;
+    //   }));
+  return this.http.get<User>(`http://localhost:1337/user-details/${id}`);
+
   }
+
 }
